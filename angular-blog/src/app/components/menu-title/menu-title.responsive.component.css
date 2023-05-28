@@ -1,0 +1,8 @@
+@media screen and (max-width:600px) {
+    
+    .container__menu-title > h1 {
+        font-size: 30px;
+    }
+}
+
+/*Para deixar a página responsiva, e também registrar o nivvo css responsivo no ts do componente*/

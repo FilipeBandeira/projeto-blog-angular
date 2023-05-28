@@ -1,0 +1,13 @@
+/*.container_menu-bar {
+    margin-top: 15px;
+} Foi colocado no css da home*/
+
+.container_menu-bar > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.container_menu-bar > ul > li {
+    margin-right: 20px;
+    list-style: none;
+}

@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  photoCover:string = "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png";
-  contentTitle:string = "Título";
-  contentDescription:string = "Notícia";
+  photoCover:string = "https://t.ctcdn.com.br/essK16aBUDd_65hp5umT3aMn_i8=/400x400/smart/filters:format(webp)/i606944.png"
+  contentTitle:string = "Título"
+  contentDescription:string = "Notícia"
 
   constructor() { }
 

@@ -10,7 +10,7 @@ const routes: Routes = [ //Para anexar uma nova página, com uma nova rota
   },
 
   {
-    path:'content',
+    path:'content/:id',
     component:ContentComponent
   }
 ];

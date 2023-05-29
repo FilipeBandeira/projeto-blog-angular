@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BigCardComponent implements OnInit {
   
-  @Input()
+  @Input() // Antes do input, adicona de forma dinâmica com o endereço local (html e ts), em seguida para o input, dinamizando no html da home
   photoCover:string = ""
   
   @Input()

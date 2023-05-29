@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContentComponent implements OnInit {
 
-  photoCover:string = "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png";
-  contentTitle:string = "Título";
-  contentDescription:string = "Notícia";
+  photoCover:string = "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
+  contentTitle:string = "Título"
+  contentDescription:string = "Notícia"
+
+  private id:string | null= "0"
 
   constructor(
     private route:ActivatedRoute
@@ -18,7 +20,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe( value =>
-      console.log(value.get("id"))
+      this.id = value.get("id")
     )
   }
 

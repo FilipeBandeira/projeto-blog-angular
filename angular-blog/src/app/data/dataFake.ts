@@ -1,13 +1,13 @@
 export const dataFake = [
     {
-        "id": 1,
+        "id": "1",
         "photo": "foto",
         "title": "títilo",
         "description": "descrição"
     },
 
     {
-        "id": 2,
+        "id": "2",
         "photo": "foto",
         "title": "títilo",
         "description": "descrição"

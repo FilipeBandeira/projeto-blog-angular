@@ -1,9 +1,9 @@
 <div class="container_content">
     
-    <div class="container_cover">
+    <div class="container_cover" *ngIf="photoCover">
         <img 
             src="{{ photoCover }}" 
-            alt="" 
+            [alt]="contentTitle"
             srcset=""
         >
     </div>

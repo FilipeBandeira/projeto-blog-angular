@@ -1,0 +1,26 @@
+
+
+# Dependências, saídas locais e credenciais de desenvolvimento
+node_modules/
+dist/
+build/
+.angular/
+coverage/
+*.o
+*.d
+*.class
+*.exe
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+!.env.sample
+imobiliaria
+BancoSimples
+sistema_funcionarios
+test_conta
+test_funcionarios

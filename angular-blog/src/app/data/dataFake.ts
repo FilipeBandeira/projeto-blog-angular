@@ -1,28 +1,28 @@
 export const dataFake = [
     {
         "id": "1",
-        "title": "Títilo 1",
+        "title": "Título 1",
         "description": "Descrição",
         "photoCover": "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
     },
 
     {
         "id": "2",
-        "title": "Títilo 2",
+        "title": "Título 2",
         "description": "Descrição",
         "photoCover": "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
     },
 
     {
         "id": "3",
-        "title": "Títilo 3",
+        "title": "Título 3",
         "description": "Descrição",
         "photoCover": "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
     },
 
     {
         "id": "4",
-        "title": "Títilo 4",
+        "title": "Título 4",
         "description": "Descrição",
         "photoCover": "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
     }

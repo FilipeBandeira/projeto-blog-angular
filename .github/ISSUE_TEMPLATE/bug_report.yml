@@ -1,0 +1,22 @@
+name: Relatar problema
+description: Informe um comportamento incorreto que pode ser reproduzido.
+title: "fix: "
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+      description: Inclua entrada, passos e comandos usados.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Resultado esperado e observado
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Sistema operacional e versões do compilador ou runtime.

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { dataFake } from 'src/app/data/dataFake';
 
 @Component({
@@ -7,32 +8,28 @@ import { dataFake } from 'src/app/data/dataFake';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, OnDestroy {
+  photoCover = '';
+  contentTitle = '';
+  contentDescription = '';
+  private routeSubscription?: Subscription;
 
-  photoCover:string = ""
-  contentTitle:string = ""
-  contentDescription:string = ""
-
-  private id:string | null= "0"
-
-  constructor(
-    private route:ActivatedRoute
-  ) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe( value =>
-      this.id = value.get("id")
-    )
-    this.setValuesToComponent(this.id)
+    this.routeSubscription = this.route.paramMap.subscribe(params => {
+      this.setValuesToComponent(params.get('id'));
+    });
   }
 
-  setValuesToComponent(id:string | null) {
-    const result = dataFake.filter(article => article.id == id)[0]
-
-    this.contentTitle = result.title
-    this.contentDescription = result.description
-    this.photoCover = result.photoCover
-
+  ngOnDestroy(): void {
+    this.routeSubscription?.unsubscribe();
   }
 
+  setValuesToComponent(id: string | null): void {
+    const article = dataFake.find(item => item.id === id);
+    this.contentTitle = article?.title ?? 'Artigo não encontrado';
+    this.contentDescription = article?.description ?? 'Volte à página inicial e escolha um artigo disponível.';
+    this.photoCover = article?.photoCover ?? '';
+  }
 }
